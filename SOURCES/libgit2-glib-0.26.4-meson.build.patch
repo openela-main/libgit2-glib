@@ -1,0 +1,12 @@
+diff -up libgit2-glib-0.26.4/meson.build.orig libgit2-glib-0.26.4/meson.build
+--- libgit2-glib-0.26.4/meson.build.orig	2018-03-02 04:51:47.000000000 -0500
++++ libgit2-glib-0.26.4/meson.build	2018-06-18 10:43:19.459021647 -0400
+@@ -131,8 +131,6 @@ enable_vapi = get_option('vapi')
+ if enable_vapi
+   assert(enable_gir, 'vapi support was requested, but introspection support is mandatory.')
+   assert(add_languages('vala', required: false), 'vapi support was requested, but vala not found.')
+-
+-  meson.add_install_script('meson_vapi_link.py', libgit2_glib_datadir)
+ endif
+ 
+ # Check for libgit2 ssh support
